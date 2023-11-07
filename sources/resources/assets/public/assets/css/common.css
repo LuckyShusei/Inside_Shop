@@ -1,0 +1,553 @@
+@charset "UTF-8";
+
+/*=============================================
+
+	common
+
+==============================================*/
+body {
+	min-width: 1280px;
+	font-family: "M PLUS Rounded 1c";
+	color: #333;
+}
+#content {
+	position: relative;
+}
+.sp {
+	display: none;
+}
+
+
+
+/*
+	LOGO追随
+================================*/
+.logo {
+	position: fixed;
+	top: 80px;
+	margin: 0 0 0 40px;
+	z-index: 100;
+}
+
+
+/*
+	parts
+================================*/
+.r-block {
+	width: 1280px;
+	margin: 0 auto;
+	padding: 0 40px 0 152px;
+}
+
+.white-space-pre {
+    white-space: pre;
+}
+
+/* TITLE */
+.secTitBox {
+	text-align: center;
+	color: #cbab64;
+	margin: 0 0 60px;
+}
+.secTitBox .tit {
+	font-family: 'Oswald', sans-serif;
+	font-size: 70px;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin: 0 0 15px;
+}
+.secTitBox .sub {
+	font-weight: 500;
+	letter-spacing: 0.15em;
+}
+
+
+
+
+/*
+	FOOTER
+================================*/
+footer {
+	background: url("../images/shared/bg_footer.jpg") no-repeat top center;
+	background-size: cover;
+	padding: 250px 0 0;
+}
+footer .btmBox {
+	background: #cbab64;
+	height: 113px;
+	position: absolute;
+	width: 100%;
+}
+footer .btmBox .nav {
+	float: left;
+	padding: 48px 0 0 0;
+}
+footer .btmBox .nav li {
+	float: left;
+	margin: 0 20px 0 0;
+}
+footer .btmBox .nav li a {
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 0.06em;
+}
+footer .btmBox .nav li a:hover {
+	text-decoration: underline;
+}
+footer .btmBox .copy {
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 0.06em;
+	float: right;
+	padding: 50px 0 0 0;
+}
+footer .chat {
+	position: fixed;
+	bottom: 60px;
+	right: 20px;
+	width: 100px;
+	z-index: 100;
+}
+footer .chat:hover {
+	opacity: 0.8;
+}
+footer .chat img {
+	width: 100%;
+}
+
+
+/*
+	TOPICPATH
+================================*/
+.topicPath {
+	width: 1280px;
+    margin: 0 auto;
+    padding: 0 0 0 152px;
+}
+.topicPath ul {
+	border: solid 2px #000;
+	padding: 11px 40px 11px 25px;
+	position: relative;
+	display: inline-block;
+	margin: 0 40px 20px 0;
+	float: right;
+}
+.topicPath ul:before {
+	content: "";
+	background: url("../images/shared/deco_topicpath.png") no-repeat;
+	width: 5px;
+	height: 29px;
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	right: 14px;
+}
+.topicPath li {
+	float: left;
+	font-size: 12px;
+}
+.topicPath li:after {
+	content: ">";
+	padding: 0 5px;
+}
+.topicPath li:last-child:after {
+	content: none;
+}
+.topicPath li a {
+	font-size: 12px;
+	text-decoration: underline;
+}
+.topicPath li a:hover {
+	text-decoration: none;
+}
+
+
+
+/*
+	SHOP
+================================*/
+.shopArea {
+	background: #fef4de;
+	padding: 100px 0 60px;
+}
+.shopArea .lead {
+	line-height: 1.6;
+	margin: 0 0 50px;
+}
+.shopArea .lead span {
+	font-size: 16px;
+}
+.shopArea .itemBox {
+	float: left;
+	width: 336px;
+	margin: 0 40px 40px 0;
+	position: relative;
+}
+.shopArea .itemBox:nth-child(3n) {
+	margin: 0 0 40px 0;
+}
+.shopArea .itemBox .icon {
+	width: 80px;
+	position: absolute;
+	top: -20px;
+	right: -20px;
+}
+.shopArea .itemBox .icon img {
+	width: 100%;
+}
+.shopArea .itemBox .photo {
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	width: 100%;
+	height: 220px;
+}
+.shop .shopArea .itemBox .photo {
+	border-bottom: solid 1px #eee;
+	background: #fff;
+}
+.shopArea .itemBox .photo img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	font-family: 'object-fit: cover;'
+}
+.shop .shopArea .itemBox .photo img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain;
+	font-family: 'object-fit: contain;'
+}
+.shopArea .itemBox .txtBody {
+	background: #fff;
+	padding: 30px;
+	border-radius: 0 0 10px 10px;
+
+}
+.shop .shopArea .itemBox .txtBody {
+	padding: 10px 30px 30px;
+
+}
+.shopArea .itemBox .txtBody .catch {
+	font-size: 17px;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	line-height: 1.5;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 0 5px;
+}
+.shopArea .itemBox .txtBody .storeName {
+	border-bottom: solid 1px #ccc;
+	position: relative;
+	margin: 0 0 20px;
+	display: table;
+	width: 100%;
+}
+.shopArea .itemBox .txtBody .storeName:before {
+	content: "";
+	width: 100px;
+	height: 2px;
+	background: #f6ab00;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.shopArea .itemBox .txtBody .storeName a {
+	font-size: 18px;
+	font-weight: 700;
+	color: #f6ab00;
+	letter-spacing: 0.06em;
+	padding: 15px 30px 15px 0;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 1.4;
+}
+.shopArea .itemBox .txtBody .storeName a:after {
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: .2em;
+    margin-top: -5px;
+    background: url("../images/shared/arr_yl_right.png") no-repeat center right;
+	background-size: 100%;
+	width: 18px;
+	height: 12px;
+    transition: all .2s;
+}
+.shopArea .itemBox .txtBody .storeName a:hover:after {
+  right: -.05em;
+}
+
+
+.shopArea .itemBox .txtBody p {
+	line-height: 1.7;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+body {
+	min-width: auto;
+}
+#content {}
+.sp {
+	display: block;
+}
+.pc {
+	display: none;
+}
+
+
+
+/*
+	LOGO追随
+================================*/
+.logo {
+	position: static;
+	margin: 0 0 0 3%;
+	width: 26px;
+	float: left;
+}
+.logo img {
+	width: 100%;
+}
+
+
+
+/*
+	parts
+================================*/
+.r-block {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+/* TITLE */
+.secTitBox {
+	text-align: center;
+	color: #cbab64;
+	margin: 0 0 40px;
+}
+.secTitBox .tit {
+	font-size: 50px;
+	margin: 0 0 10px;
+}
+.secTitBox .sub {
+	font-size: 15px;
+}
+
+
+
+
+/*
+	FOOTER
+================================*/
+footer {
+	background: url("../images/shared/bg_footer_sp.jpg") no-repeat bottom center;
+	background-size: cover;
+	padding: 150px 0 0;
+}
+footer .btmBox {
+	background: #cbab64;
+	height: auto;
+	padding: 0 0 20px;
+}
+footer .btmBox .nav {
+	float: none;
+	padding: 20px 0 0;
+	display: table;
+	margin: 0 auto;
+}
+footer .btmBox .nav li {
+	float: none;
+	margin: 0 0 8px 0;
+	text-align: center;
+}
+footer .btmBox .nav li a {
+	color: #fff;
+	font-size: 12px;
+}
+footer .btmBox .nav li a:hover {
+	text-decoration: none;
+}
+footer .btmBox .copy {
+	font-size: 10px;
+	float: none;
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+footer .chat {
+	position: fixed;
+	bottom: 30px;
+	right: 3%;
+	width: 80px;
+}
+footer .chat:hover {
+	opacity: 1;
+}
+
+
+/*
+	TOPICPATH
+================================*/
+.topicPath {
+	width: 85%;
+	margin: 0 3% 0 0;
+	position: absolute;
+	right: 0;
+	top: 8px;
+    padding: 0;
+}
+.topicPath ul {
+	border: solid 2px #000;
+	padding: 7px 23px 7px 10px;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	float: right;
+}
+.topicPath ul:before {
+	content: "";
+	background: url("../images/shared/deco_topicpath.png") no-repeat;
+	background-size: 100%;
+	width: 4px;
+	height: 23px;
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	right: 8px;
+}
+.topicPath li {
+	float: left;
+	font-size: 10px;
+}
+.topicPath li:after {
+	content: ">";
+	padding: 0 5px;
+}
+.topicPath li a {
+	font-size: 10px;
+	text-decoration: underline;
+}
+.topicPath li a:hover {
+	text-decoration: underline;
+}
+
+
+
+/*
+	SHOP
+================================*/
+.shopArea {
+	background: #fef4de;
+	padding: 50px 0 50px;
+}
+.shopArea .lead {
+	line-height: 1.6;
+	font-size: 15px;
+	margin: 0 0 30px;
+}
+.shopArea .lead span {
+	font-size: 13px;
+}
+
+.shopArea .itemBox {
+	float: none;
+	width: 100%;
+	margin: 0 0 25px 0;
+	position: relative;
+}
+.shopArea .itemBox:nth-child(3n) {
+	margin: 0 0 25px 0;
+}
+.shopArea .itemBox:last-child {
+	margin: 0;
+}
+.shopArea .itemBox .icon {
+	width: 65px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+.shopArea .itemBox .icon img {
+	width: 100%;
+}
+.shopArea .itemBox .photo {
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	width: 100%;
+	height: 220px;
+}
+.shop .shopArea .itemBox .photo {
+	background: #fff;
+	border-bottom: solid 1px #eee;
+}
+.shop .shopArea .itemBox .photo img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain;
+	font-family: 'object-fit: contain;'
+}
+.shopArea .itemBox .txtBody {
+	background: #fff;
+	padding: 20px 25px;
+	border-radius: 0 0 10px 10px;
+
+}
+.shopArea .itemBox .txtBody .catch {
+	margin: 0 0 5px;
+	display: table;
+}
+.shopArea .itemBox .txtBody .catch {
+	font-size: 16px;
+	line-height: 1.5;
+	display: table-cell;
+	vertical-align: middle;
+}
+.shopArea .itemBox .txtBody .storeName {
+	border-bottom: solid 1px #ccc;
+	position: relative;
+	margin: 0 0 20px;
+}
+.shopArea .itemBox .txtBody .storeName:before {
+	content: "";
+	width: 100px;
+	height: 2px;
+	background: #f6ab00;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+}
+.shopArea .itemBox .txtBody .storeName a {
+	font-size: 17px;
+	color: #f6ab00;
+	padding: 15px 30px 15px 0;
+	display: block;
+}
+.shopArea .itemBox .txtBody .storeName a:after {
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: .2em;
+    margin-top: -5px;
+    background: url("../images/shared/arr_yl_right.png") no-repeat center right;
+	background-size: 100%;
+	width: 18px;
+	height: 12px;
+    transition: all .2s;
+}
+.shopArea .itemBox .txtBody .storeName a:hover:after {
+  right: -.05em;
+}
+.shopArea .itemBox .txtBody p {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+
+
+}

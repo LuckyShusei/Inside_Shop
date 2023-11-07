@@ -1,0 +1,232 @@
+{
+    "site": {
+        "name": "INSIDE APP",
+        "description": "XXXXX",
+        "pages": [
+            {
+                "name": "取引先",
+                "view": "partners",
+                "menu": true,
+                "icon": "fas fa-building"
+            },
+            {
+                "name": "プロジェクト",
+                "view": "projects",
+                "menu": true,
+                "icon": "fab fa-product-hunt"
+            },
+            {
+                "name": "案件",
+                "view": "items",
+                "menu": true,
+                "icon": "fab fa-product-hunt"
+            },
+            {
+                "name": "設定",
+                "menu": true,
+                "icon": "fas fa-cog",
+                "pages": [
+                    {
+                        "name": "組織",
+                        "view": "organizations",
+                        "menu": true,
+                        "icon": "fas fa-building"
+                    },
+                    {
+                        "name": "ユーザー",
+                        "view": "users",
+                        "menu": true,
+                        "icon": "fas fa-users"
+                    },
+                    {
+                        "name": "ロール",
+                        "view": "roles",
+                        "menu": true,
+                        "icon": "fas fa-users-cog"
+                    }
+                ]
+            }
+        ]
+    },
+    "resources": {
+        "organizations": {
+            "name": "required",
+            "information_mail_from": "required|email",
+            "information_mail_to": "required|email",
+            "logo_image": "",
+            "active_flag": ""
+        },
+        "organizations/updateSort": {
+            "id_list": "required"
+        },
+        "users": {
+            "name": "required",
+            "role_id": "required",
+            "email": "required|email",
+            "password": "required",
+            "confirm_password": "required",
+            "active_flag": ""
+        },
+        "users/updateSort": {
+            "id_list": "required"
+        },
+        "sys-files": {
+            "id": "required"
+        },
+        "sys-files/temp": {
+            "input_file": "required"
+        },
+        "sys-files/register": {
+            "id": "required"
+        },
+        "privileges": {
+        },
+        "privileges/updateSort": {
+            "id_list": "required"
+        },
+        "roles-privileges": {
+            "role_id": "required",
+            "privilege": "required"
+        },
+        "roles": {
+            "name": "required"
+        },
+        "roles/updateSort": {
+            "id_list": "required"
+        },
+        "partners": {
+            "name": "required",
+            "official_name": "required",
+            "partner_type": "required",
+            "active_flag": "",
+            "organization_id": "required"
+        },
+        "partners/updateSort": {
+            "id_list": "required"
+        },
+        "projects": {
+            "name": "required",
+            "project_type": "required",
+            "client": "",
+            "manager": "",
+            "detail": "",
+            "status": "",
+            "start_date": "date",
+            "end_date": "date",
+            "image": "",
+            "active_flag": "",
+            "organization_id": "required"
+        },
+        "items": {
+            "name": "required",
+            "project_id": "required",
+            "item_type": "required",
+            "manager": "",
+            "detail": "",
+            "status": "",
+            "start_date": "date",
+            "end_date": "date",
+            "active_flag": "",
+            "organization_id": "required"
+        }
+    },
+    "masters": [
+        "roles", "privileges", "organizations"
+    ],
+    "options": {
+        "active_flag": [
+            {
+                "key": 1,
+                "label": "有効"
+            },
+            {
+                "key": 0,
+                "label": "無効"
+            }
+        ],
+        "partner_type": [
+            {
+                "key": 1,
+                "label": "顧客"
+            },
+            {
+                "key": 2,
+                "label": "協力会社"
+            }
+        ],
+        "project_type": [
+            {
+                "key": 1,
+                "label": "請負"
+            },
+            {
+                "key": 2,
+                "label": "保守"
+            },
+            {
+                "key": 3,
+                "label": "委任"
+            },
+            {
+                "key": 4,
+                "label": "派遣"
+            },
+            {
+                "key": 98,
+                "label": "社内業務"
+            },
+            {
+                "key": 99,
+                "label": "その他"
+            }
+        ],
+        "item_type": [
+            {
+                "key": 1,
+                "label": "案件業務"
+            },
+            {
+                "key": 2,
+                "label": "案件事務"
+            },
+            {
+                "key": 3,
+                "label": "案件管理"
+            },
+            {
+                "key": 97,
+                "label": "見積"
+            },
+            {
+                "key": 98,
+                "label": "事前準備"
+            },
+            {
+                "key": 99,
+                "label": "その他"
+            }
+        ],
+        "project_status": [
+            {
+                "key": 1,
+                "label": "準備中"
+            },
+            {
+                "key": 2,
+                "label": "提案中"
+            },
+            {
+                "key": 3,
+                "label": "進行中"
+            },
+            {
+                "key": 98,
+                "label": "中止"
+            },
+            {
+                "key": 99,
+                "label": "完了"
+            }
+        ]
+    }
+}

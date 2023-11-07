@@ -1,0 +1,201 @@
+
+
+#image_area {
+    display: none;
+}
+#image_area img {
+    width: 100%;
+}
+#video_area {
+    display: none;
+    position: relative;
+}
+#video_area iframe {
+    max-width: 100%;
+    height: 453px;
+    width: 100%;
+}
+.row {
+    display: table-row;
+}
+.active_image {
+    width: 48%;
+    float: left;
+    padding: 1%;
+}
+.active_image img {
+    width: 100%;
+}
+.item-image.selected img {
+    border: 5px solid #f00;
+}
+.active_image.selected .border {
+    border: 5px solid #f00;
+}
+.active_image.selected img {
+    animation: blinkAnime 1s infinite alternate;
+}
+@keyframes blinkAnime{
+    0% { opacity: 0.2 }
+    100% { opacity: 1 }
+}
+.shopListWrap li {
+    list-style-type: none;
+    list-style-image: none;
+    max-width: 25%;
+    float: left;
+}
+.shopListWrap li img {
+    width: 100%;
+}
+#go_to_buy {
+    color: #fff!important;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    z-index: 2;
+}
+#remain_time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #000;
+    color: #fff;
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+    display: none;
+}
+.card-body {
+    margin: 5px 0;
+}
+.chat-region h3 {
+    padding: 5px 10px;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+    background: #cbab64;
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    #video_area iframe {
+        max-width: 100%;
+        min-height: 180px;
+        width: 100%;
+        height: auto;
+    }
+    #go_to_buy {
+        color: #fff!important;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        z-index: 2;
+    }
+
+}
+
+.chat-region {
+    /* width: 300px;
+    right: 10px;
+    */
+    width: 25%;
+    float: right;
+    bottom: 0;
+    padding: 0;
+    background-color: #fff;
+    /*
+    position: fixed;
+    */
+    z-index: 100;
+}
+.chat-header .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.show-chat {
+    width: 100px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    display: none;
+    cursor: pointer;
+}
+#chatList {
+    height: 196px;
+    max-height: 196px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+#chat-form {
+    padding: 0 10px 10px;
+}
+
+#chatListInner .img {
+    width: 100%;
+    height: auto;
+}
+#chatListInner .chatIcon {
+    float: left;
+    width: 16%;
+}
+#chatListInner .chatTitle {
+    float: right;
+    width: 80%;
+}
+.chat-content {
+    padding: 0.5em 0;
+    border-bottom: 1px dashed #CBBB97;
+    white-space: pre;
+}
+.afterApproval {
+    font-size: 12px;
+    display: block;
+    margin: 7px 0 0 ;
+    text-align: center;
+}
+.btn-primary {
+    width: 100%;
+    padding: 8px 0;
+}
+#chat-clone {
+    display:none;
+}
+.chat-title {
+    padding: 0 15px;
+}
+@media screen and (max-width: 768px) {
+    #chatList {
+        height: auto;
+        max-height: 200px;
+    }
+    .chat-region {
+        width: 94%;
+        float: none;
+        clear: both;
+        margin: 0 auto 18px;
+    }
+    #chatListInner .chatIcon {
+        float: left;
+        width: 12%;
+    }
+    #chatListInner .chatTitle {
+        float: right;
+        width: 84%;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+#showing_movie {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    z-index: 2;
+    font-weight: bold;
+    color: #7b6026;
+}

@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+    inside_app:
+        build: .
+        depends_on:
+            - inside_db
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - "../sources:/var/www/html"
+            - "./working:/home/working"
+            - "./working/setting/php.ini:/usr/local/etc/php/php.ini"
+            - "./working/setting/app.conf:/etc/apache2/sites-available/app.conf"
+        links:
+            - inside_db
+    inside_db:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: app_db
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+            TZ: Asia/Tokyo
+        ports:
+            - "3306:3306"
+        volumes:
+            - "./working:/home/working"
+            - "./working/init_db:/docker-entrypoint-initdb.d"
+            - "volume_inside_db:/var/lib/mysql"
+volumes:
+    volume_inside_db:

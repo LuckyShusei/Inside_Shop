@@ -1,0 +1,714 @@
+@charset "UTF-8";
+
+/*=============================================
+
+	top
+
+==============================================*/
+/*
+	メインビジュアル
+================================*/
+.keyArea {
+	background: url("../images/shared/bg_pattern01.jpg") no-repeat 0 0;
+	background-size: cover;
+	padding: 80px 0;
+}
+.keyArea .keyInner {
+	width: 1280px;
+	margin: 0 auto;
+	position: relative;
+}
+.keyArea .visualBox {
+	position: relative;
+}
+.keyArea .visualBox .top-image {
+	width: 1088px;
+	clear: both;
+}
+.keyArea .visualBox .top-image img {
+	width: 100%;
+	border-radius: 10px;
+}
+.keyArea .visualBox .slider {
+	width: 1088px;
+	clear: both;
+}
+.keyArea .visualBox .slider img {
+	width: 100%;
+	border-radius: 10px;
+}
+.keyArea .liveBox {
+	width: 420px;
+	margin: 0 0 40px;
+	position: absolute;
+	top: 158px;
+	right: 80px;
+}
+.keyArea .liveBox .tit {
+	text-align: center;
+	font-size: 18px;
+	border-radius: 6px;
+	background: #000;
+	color: #f6ab00;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	padding: 15px;
+	margin: 0 0 5px;
+}
+.keyArea .liveBox .liveContsBox {
+	border-radius: 6px;
+	border: solid 5px #000;
+	background: #000;;
+}
+.keyArea .liveBox .liveContsBox img {
+	width: 100%;
+	height: auto;
+}
+.keyArea .liveBox .liveContsBox iframe {
+	max-width: 100%;
+	height: 240px;
+}
+.keyArea #video_cover {
+	width: 420px;
+	height: 252px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.keyArea .infoBox {
+	background: rgba(0,0,0,0.9);
+	border-radius: 10px 0 10px 10px;
+	width: 500px;
+	padding: 30px;
+	position: absolute;
+	bottom: -40px;
+	right: 0;
+}
+.keyArea .infoBox:before {
+	content: "";
+	background: url("../images/top/arr_label.png") no-repeat;
+	background-size: 100%;
+	width: 40px;
+	height: 10px;
+	position: absolute;
+	top: -10px;
+	right: 0;
+}
+.keyArea .infoBox .tit {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 500;
+	border-bottom: solid 1px #ccc;
+	position: relative;
+	padding: 0 0 15px;
+	margin: 0 0 15px;
+	letter-spacing: 0.06em;
+}
+.keyArea .infoBox .tit:before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #f6ab00;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.keyArea .infoBox .info-scr {
+	max-height: 96px;
+}
+.keyArea .infoBox .jspDrag {
+    background: #fff;
+}
+.keyArea .infoBox .jspTrack {
+    background: url("../images/top/bg_info_scroll.png") repeat-y;
+}
+.keyArea .infoBox dl {
+	margin: 0 10px 0 0;
+	padding: 12px 0 0;
+	border-bottom: dotted 1px #fff;
+}
+.keyArea .infoBox dl:first-child {
+	padding: 5px 0 0;
+}
+.keyArea .infoBox dl:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.keyArea .infoBox dt {
+	float: left;
+	font-size: 12px;
+	color: #fff;
+	font-weight: normal;
+	text-align: left;
+	letter-spacing: 0.06em;
+	/* border-bottom: dotted 1px #fff; */
+	width: 234px;
+	margin: 0 10px 0 0;
+	padding: 0 0 8px;
+}
+.keyArea .infoBox .time {
+	float: left;
+	width: 110px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.06em;
+	/* border-bottom: dotted 1px #fff; */
+	margin: 0 10px 0 0;
+	padding: 0 0 8px;
+}
+.keyArea .infoBox .schedule_list_category {
+	float: left;
+	width: 48px;
+	height: 23px;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.06em;
+	border-bottom: none;
+	background: #555555;
+	padding: 4px 0 0;
+	font-weight: 900;
+	line-height: 1;
+}
+.keyArea .infoBox .on .live {
+	background: #e60014;
+}
+
+/* SHOP詳細 */
+.shop .keyArea {
+	padding: 20px 0 80px;
+}
+.shop .keyArea .keyImg {
+	width: 74%;
+	float: left;
+}
+.shop .keyArea .keyImg img {
+	width: 100%;
+	border-radius: 10px;
+}
+.shop .keyArea .btmBox {
+	margin: 20px 0 0;
+}
+.shop .keyArea .storeNameBox {
+	background: #cbab64;
+	border-radius: 10px;
+	width: 750px;
+	text-align: center;
+	padding: 22px;
+	position: relative;
+	float: left;
+}
+.shop .keyArea .storeNameBox:before {
+	content: "";
+	background: url("../images/shared/deco_hang.png") no-repeat;
+	background-size: 100%;
+	width: 10px;
+	height: 40px;
+	position: absolute;
+	top: -20px;
+	left: 20px;
+}
+.shop .keyArea .storeNameBox:after {
+	content: "";
+	background: url("../images/shared/deco_hang.png") no-repeat;
+	background-size: 100%;
+	width: 10px;
+	height: 40px;
+	position: absolute;
+	top: -20px;
+	right: 20px;
+}
+.shop .keyArea .storeNameBox .sub {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 0.03em;
+	line-height: 1.4;
+	margin: 0 0 12px;
+}
+.shop .keyArea .storeNameBox .storeName {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+}
+.shop .keyArea .snsBox {
+	float: right;
+	padding: 35px 0 0;
+}
+.shop .keyArea .snsBox li {
+	float: left;
+	width: 40px;
+	margin: 0 10px 0 0;
+}
+.shop .keyArea .snsBox li:nth-child(3) {
+	margin: 0 15px 0 0;
+}
+.shop .keyArea .snsBox li:last-child {
+	margin: 5px 0 0 0;
+	width: 130px;
+}
+.shop .keyArea .snsBox li:hover {
+	opacity: 0.8;
+}
+.shop .keyArea .snsBox li img {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+/*
+	LEAD
+================================*/
+.leadArea {
+	padding: 50px 0;
+}
+.leadArea .tit {
+	color: #cbab64;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.5;
+	margin: 0 0 15px;
+	letter-spacing: 0.03em;
+}
+.leadArea .tit.yl {
+	color: #f6ab00;
+}
+.leadArea p {
+	line-height: 1.9;
+	letter-spacing: 0.03em;
+}
+.leadArea .listBoxWrap {
+	margin: 30px 0;
+}
+.leadArea .listBox {
+	float: left;
+	width: 534px;
+	background: #f5f5f5;
+	border-radius: 5px;
+	padding: 20px;
+}
+.leadArea .listBox:last-child {
+	float: right;
+}
+.leadArea .listBox .titBox {
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 0.03em;
+	background: #cbab64;
+	border-radius: 5px;
+	padding: 9px 20px;
+	margin: 0 0 18px;
+}
+.leadArea .listBox ul li {
+	margin: 0 0 10px;
+	letter-spacing: 0.03em;
+}
+.leadArea .listBox ul li:last-child {
+	margin: 0;
+}
+.leadArea .listBox ul li:before {
+	content: "・";
+}
+.leadArea .memo {
+	font-size: 14px;
+	letter-spacing: 0.03em;
+}
+.leadArea .memo a {
+	color: #f6ab00;
+	text-decoration: underline;
+}
+.leadArea .memo a:hover {
+	text-decoration: none;
+}
+
+
+
+/*
+	NEWS
+================================*/
+.newsArea {
+	padding: 100px 0;
+}
+.newsArea .scroll {
+	max-height: 420px;
+}
+.newsArea dl {
+	border-bottom: solid 1px #ccc;
+	padding: 20px 0 20px 0;
+	margin: 0 50px 0 0;
+}
+.newsArea dl:first-child {
+	padding: 0 0 20px 0;
+}
+.newsArea dl dt {
+	font-size: 14px;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 0.06em;
+	margin: 0 0 12px;
+}
+.newsArea dl dd .tit {
+	font-size: 18px;
+	color: #f6ab00;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	margin: 0 0 12px;
+	line-height: 1.5;
+}
+.newsArea dl dd p {
+	letter-spacing: 0.06em;
+	line-height: 1.7;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+/*
+	メインビジュアル
+================================*/
+.keyArea {
+	background: url("../images/shared/bg_pattern01.jpg") no-repeat 0 0;
+	background-size: cover;
+	padding: 45px 0 35px;
+	position: relative;
+}
+.keyArea .siteName {
+	position: absolute;
+	top: 15px;
+	right: 3%;
+	width: 85%;
+	text-align: right;
+}
+.keyArea .siteName:before {
+	content: "";
+	width: calc(100% - 95px);
+	background: #000;
+	height: 1px;
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+.keyArea .siteName p {
+	font-size: 10px;
+	font-weight: bold;
+}
+.keyArea .keyInner {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.keyArea .visualBox {
+	position: relative;
+	padding: 0;
+}
+.keyArea .visualBox .top-image {
+	width: 85%;
+	clear: none;
+	float: right;
+	margin: 0 3% 10px 0;
+}
+.keyArea .visualBox .top-image img {
+	width: 100%;
+	border-radius: 5px;
+}
+.keyArea .visualBox .slider {
+	width: 85%;
+	clear: none;
+	float: right;
+	margin: 0 3% 10px 0;
+}
+.keyArea .visualBox .slider img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+
+.keyArea .liveBox {
+	width: 34vw;
+	margin: 0;
+	position: absolute;
+	bottom: auto;
+	right: 3%;
+	top: 9vw;
+}
+.keyArea .liveBox .tit {
+	font-size: 10px;
+	padding: 10px 3px;
+	margin: 0 0 3px;
+}
+.keyArea .liveBox .liveContsBox {
+	border-radius: 6px;
+	border: solid 3px #000;
+}
+.keyArea .liveBox .liveContsBox iframe {
+	max-width: 100%;
+	height: 80px;
+}
+.keyArea #video_cover {
+	width: 100%;
+	height: 80px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.keyArea .infoBox {
+	border-radius: 5px 0 0 5px;
+	width: 97%;
+	padding: 20px;
+	position: static;
+	clear: both;
+	margin: 0 0 0 3%;
+}
+.keyArea .infoBox:before {
+	content: none;
+}
+.keyArea .infoBox .tit {
+	font-size: 16px;
+	position: relative;
+	padding: 0 0 15px;
+	margin: 0 0 15px;
+}
+.keyArea .infoBox .info-scr {
+	max-height: 96px;
+}
+.keyArea .infoBox .jspDrag {
+    background: #fff;
+}
+.keyArea .infoBox .jspTrack {
+    background: url("../images/top/bg_info_scroll.png") repeat-y;
+}
+.keyArea .infoBox dl {
+	margin: 0 10px 0 0;
+	padding: 8px 0;
+	border-bottom: dotted 1px #fff;
+	position: relative;
+}
+.keyArea .infoBox dl:first-child {
+    padding: 0 0 8px;
+}
+.keyArea .infoBox dt {
+	float: left;
+	font-size: 12px;
+	text-align: left;
+	border-bottom: none;
+	width: 80%;
+	margin: 0;
+	padding: 0 0 5px;
+	word-wrap: break-word;
+}
+.keyArea .infoBox .time {
+	float: left;
+	width: 80%;
+	font-size: 12px;
+	text-align: left;
+	border-bottom: none;
+	margin: 0;
+	padding: 0;
+}
+.keyArea .infoBox .live {
+	float: none;
+	width: 48px;
+	height: 23px;
+	font-size: 12px;
+	border-bottom: none;
+	padding: 5px 0 0;
+	position: absolute;
+	right: 0;
+	top: 14px;
+}
+.keyArea .infoBox dl:first-child .live {
+    top: 5px;
+}
+
+/* SHOP詳細 */
+.shop .keyArea {
+	padding: 45px 0 35px;
+}
+.shop .keyArea .keyImg {
+	width: 85%;
+	clear: none;
+	float: right;
+	margin: 0 3% 10px 0;
+	position: relative;
+	z-index: 1;
+}
+.shop .keyArea .keyImg img {
+	width: 100%;
+	border-radius: 5px;
+}
+.shop .keyArea .btmBox {
+	margin: 0;
+	clear: both;
+}
+.shop .keyArea .storeNameBox {
+	background: #cbab64;
+	border-radius: 10px;
+	width: 94%;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	float: none;
+	margin: 0 auto;
+}
+.shop .keyArea .storeNameBox:before {
+	content: "";
+	background: url("../images/shared/deco_hang.png") no-repeat;
+	background-size: 100%;
+	width: 8px;
+	height: 33px;
+	position: absolute;
+	top: -18px;
+	left: 20%;
+}
+.shop .keyArea .storeNameBox:after {
+	content: "";
+	background: url("../images/shared/deco_hang.png") no-repeat;
+	background-size: 100%;
+	width: 8px;
+	height: 33px;
+	position: absolute;
+	top: -18px;
+	right: 20%;
+}
+.shop .keyArea .storeNameBox .sub {
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 0 0 12px;
+	text-align: left;
+}
+.shop .keyArea .storeNameBox .storeName {
+	font-size: 19px;
+}
+.shop .keyArea .snsBox {
+	float: none;
+	padding: 25px 0 0;
+	margin: 0 auto;
+	display: table;
+}
+.shop .keyArea .snsBox li {
+	float: left;
+	width: 35px;
+	margin: 0 10px 0 0;
+}
+.shop .keyArea .snsBox li:nth-child(3) {
+	margin: 0 10px 0 0;
+}
+.shop .keyArea .snsBox li:last-child {
+	margin: 3px 0 0 0;
+	width: 130px;
+}
+.shop .keyArea .snsBox li:hover {
+	opacity: 1;
+}
+.shop .keyArea .snsBox li img {
+	width: 100%;
+}
+
+
+
+
+
+/*
+	LEAD
+================================*/
+.leadArea {
+	padding: 40px 0;
+}
+.leadArea .tit {
+	font-size: 17px;
+	margin: 0 0 15px;
+}
+.leadArea p {
+	line-height: 1.6;
+	font-size: 15px;
+}
+.leadArea .listBoxWrap {
+	margin: 20px 0;
+}
+.leadArea .listBox {
+	float: none;
+	width: 100%;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 0 0 15px;
+}
+.leadArea .listBox:last-child {
+	float: none;
+	margin: 0;
+}
+.leadArea .listBox .titBox {
+	font-size: 15px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 12px 20px;
+	margin: 0 0 15px;
+	line-height: 1.4;
+}
+.leadArea .listBox ul li {
+	margin: 0 0 10px;
+	font-size: 15px;
+}
+.leadArea .memo {
+	font-size: 11px;
+}
+.leadArea .memo a {
+	color: #f6ab00;
+	text-decoration: underline;
+}
+.leadArea .memo a:hover {
+	text-decoration: underline;
+}
+
+
+/*
+	NEWS
+================================*/
+.newsArea {
+	padding: 50px 0;
+}
+.newsArea .scroll {
+	max-height: 300px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+}
+.newsArea .jspVerticalBar {
+	width: 8px;
+}
+.newsArea dl {
+	border-bottom: solid 1px #ccc;
+	padding: 15px 0 15px 0;
+	margin: 0 15px 0 0;
+}
+.newsArea dl:first-child {
+	padding: 0 0 15px 0;
+}
+.newsArea dl dt {
+	font-size: 12px;
+	margin: 0 0 5px;
+}
+.newsArea dl dd .tit {
+	font-size: 17px;
+	margin: 0 0 10px;
+	line-height: 1.5;
+}
+.newsArea dl dd p {
+	line-height: 1.6;
+	font-size: 15px;
+}
+}

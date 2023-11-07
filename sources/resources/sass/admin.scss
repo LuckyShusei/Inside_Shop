@@ -1,0 +1,281 @@
+.nav-top {
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    margin-left: 0 !important;
+
+    .nav-top-menu {
+        width: 30%;
+        .navbar-nav {
+            display: table;
+            width: 100%;
+            li {
+                display: table-cell;
+                text-align: right;
+                width: 50%;
+            }
+        }
+    }
+}
+.content-top {
+    background-color: #001f3f;
+    padding: 5px 0 20px;
+    .login-form {
+        padding: 100px 0 400px;
+        margin: 0;
+        background-color: #fff;
+    }
+}
+
+.btn-lv {
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    color: $body-color;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    @include transition($btn-transition);
+
+    @include hover {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        @include box-shadow($btn-active-box-shadow);
+
+        &:focus {
+            @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        }
+    }
+}
+
+.c-form__fileUpload {
+    &Thumbnails {
+        margin-bottom: 10px;
+    }
+    &Thumbnail {
+        display: inline-block;
+        width: 170px;
+        height: 170px;
+        background-color: #f5f6f8;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor:pointer;
+        position: relative;
+        &::before{
+            display: block;
+            content: "";
+            width: 100%;
+            height:100%;
+            background: transparent;
+        }
+
+        .delete-image {
+            display: none;
+            font-family: FontAwesome;
+            font-size: 18px;
+            line-height: 1;
+            color: #54687A;
+            padding: 5px;
+            background: #fff;
+            border-radius: 3px;
+            position: absolute;
+            top:2px;
+            right: 2px;
+        }
+    }
+    &Thumbnail:hover {
+        &::before{
+            background: rgba(0,0,0,0.5);
+        }
+
+        .delete-image {
+            display: inline-block;
+            font-family: FontAwesome;
+            font-size: 18px;
+            line-height: 1;
+            color: #54687A;
+            padding: 5px;
+            background: #fff;
+            border-radius: 3px;
+            position: absolute;
+            top:2px;
+            right: 2px;
+        }
+    }
+}
+
+
+.btn-lv-regular{
+    @include button-variant(#FFFFFF, #595959, #F2F2F2, #262626, #F2F2F2, #262626 );
+    color: #595959;
+    cursor:pointer;
+}
+
+.btn-lv-regular:hover {
+    color: #262626;
+}
+.border-lv-dashed{
+    border: $border-width dashed #ccc !important;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            @each $size, $length in $spacers {
+                .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+                .#{$abbrev}t#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-top: $length !important;
+                }
+                .#{$abbrev}r#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size} {
+                    #{$prop}-right: $length !important;
+                }
+                .#{$abbrev}b#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-bottom: $length !important;
+                }
+                .#{$abbrev}l#{$infix}-#{$size},
+                .#{$abbrev}x#{$infix}-#{$size} {
+                    #{$prop}-left: $length !important;
+                }
+            }
+        }
+
+        // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+        @each $size, $length in $spacers {
+            @if $size != 0 {
+                .m#{$infix}-n#{$size} { margin: -$length !important; }
+                .mt#{$infix}-n#{$size},
+                .my#{$infix}-n#{$size} {
+                    margin-top: -$length !important;
+                }
+                .mr#{$infix}-n#{$size},
+                .mx#{$infix}-n#{$size} {
+                    margin-right: -$length !important;
+                }
+                .mb#{$infix}-n#{$size},
+                .my#{$infix}-n#{$size} {
+                    margin-bottom: -$length !important;
+                }
+                .ml#{$infix}-n#{$size},
+                .mx#{$infix}-n#{$size} {
+                    margin-left: -$length !important;
+                }
+            }
+        }
+
+        // Some special margin utils
+        .m#{$infix}-auto { margin: auto !important; }
+        .mt#{$infix}-auto,
+        .my#{$infix}-auto {
+            margin-top: auto !important;
+        }
+        .mr#{$infix}-auto,
+        .mx#{$infix}-auto {
+            margin-right: auto !important;
+        }
+        .mb#{$infix}-auto,
+        .my#{$infix}-auto {
+            margin-bottom: auto !important;
+        }
+        .ml#{$infix}-auto,
+        .mx#{$infix}-auto {
+            margin-left: auto !important;
+        }
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: $badge-padding-y $badge-padding-x;
+    @include font-size($badge-font-size);
+    font-weight: $badge-font-weight;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius($badge-border-radius);
+    @include transition($badge-transition);
+
+    @at-root a#{&} {
+        @include hover-focus {
+            text-decoration: none;
+        }
+    }
+
+    // Empty badges collapse automatically
+    &:empty {
+        display: none;
+    }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+    position: relative;
+    top: -1px;
+}
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+    padding-right: $badge-pill-padding-x;
+    padding-left: $badge-pill-padding-x;
+    @include border-radius($badge-pill-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+    .badge-#{$color} {
+        @include badge-variant($value);
+    }
+}
+
+.s-col-1 {
+    width: 5%;
+    display: flex;
+}
+
+.s-col-2 {
+    text-align: left;
+}
+
+.mid-left {
+    margin: auto 0 auto auto;
+}
+
+.sortable-item:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.white-space-pre {
+    white-space: pre;
+}
